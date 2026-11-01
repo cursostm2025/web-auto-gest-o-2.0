@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#064a82">
+    <meta name="description" content="Encontre instrutores de trânsito independentes e converse diretamente sobre suas aulas.">
+    <title>Web Autogestão | Encontre seu instrutor</title>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-main">
+            <a class="brand" href="/" aria-label="Web Autogestão, página inicial">
+                <span class="brand-mark" aria-hidden="true">WA</span>
+                <span class="brand-name">Web <strong>Autogestão</strong></span>
+            </a>
+
+            <form class="search-form" id="form-busca" role="search" hidden>
+                <label class="sr-only" for="busca-instrutor">Busque por instrutores ou categorias</label>
+                <input id="busca-instrutor" name="busca" type="search"
+                       placeholder="Busque por instrutores, categorias ou cidades">
+                <button type="submit" aria-label="Buscar instrutores">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+                </button>
+            </form>
+
+            <div class="account">
+                <button class="account-toggle" id="account-toggle" type="button"
+                        aria-expanded="false" aria-controls="account-menu">
+                    <span class="account-avatar" id="account-avatar" aria-hidden="true">A</span>
+                    <span class="account-copy"><small id="account-greeting">Acesse sua conta</small><strong id="account-name">Visitante</strong></span>
+                    <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="m3 6 5 5 5-5"></path></svg>
+                </button>
+                <div class="account-menu" id="account-menu" hidden>
+                    <span class="menu-heading" id="account-menu-heading">Sua jornada começa aqui</span>
+                    <a href="/login-aluno.html" id="account-login-link">Entrar como aluno</a>
+                    <a href="/cadastro-aluno.html" id="account-signup-link">Cadastrar como aluno</a>
+                    <a href="#instrutores" id="account-instructors-link" hidden>Encontrar instrutores</a>
+                    <button class="account-menu-action" id="account-logout" type="button" hidden>Sair do aluno</button>
+                    <a href="#sobre">Sobre o Web Autogestão</a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav" aria-label="Navegação principal">
+            <a class="nav-link nav-link-active" href="#inicio">Início</a>
+            <a class="nav-link" data-protected-link href="/login-aluno.html">Instrutores em destaque</a>
+            <a class="nav-link" data-protected-link href="/login-aluno.html">Aulas e categorias</a>
+            <a class="nav-link" href="#sobre">Como funciona</a>
+            <a class="nav-link nav-link-about" href="#sobre">Sobre o Web Autogestão</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio" aria-label="Destaques">
+            <div class="hero-slides" aria-live="polite">
+                <article class="hero-slide is-active" data-slide>
+                    <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&amp;fit=crop&amp;w=2000&amp;q=85"
+                         alt="Interior de um carro pronto para uma aula de direção" fetchpriority="high">
+                    <div class="hero-shade"></div>
+                    <div class="hero-copy">
+                        <span class="hero-kicker">Sua próxima conquista começa aqui</span>
+                        <h1>Aprenda a dirigir<br>no seu ritmo.</h1>
+                        <p>Encontre instrutores independentes e dê o próximo passo com confiança.</p>
+                        <a class="button button-orange" data-protected-link href="/login-aluno.html">Encontrar instrutores <span aria-hidden="true">→</span></a>
+                    </div>
+                    <span class="hero-index" aria-hidden="true">01 <i></i> 03</span>
+                </article>
+                <article class="hero-slide" data-slide aria-hidden="true">
+                    <img src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&amp;fit=crop&amp;w=2000&amp;q=85"
+                         alt="Automóvel em uma estrada aberta">
+                    <div class="hero-shade"></div>
+                    <div class="hero-copy">
+                        <span class="hero-kicker">Mais autonomia, uma aula de cada vez</span>
+                        <h2>Você escolhe<br>o seu caminho.</h2>
+                        <p>Conheça profissionais e encontre a categoria ideal para você.</p>
+                        <a class="button button-orange" data-protected-link href="/login-aluno.html">Ver instrutores <span aria-hidden="true">→</span></a>
+                    </div>
+                    <span class="hero-index" aria-hidden="true">02 <i></i> 03</span>
+                </article>
+                <article class="hero-slide" data-slide aria-hidden="true">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&amp;fit=crop&amp;w=2000&amp;q=85"
+                         alt="Carro em uma estrada cercada por árvores">
+                    <div class="hero-shade"></div>
+                    <div class="hero-copy">
+                        <span class="hero-kicker">Conexão direta com quem ensina</span>
+                        <h2>Seu próximo destino<br>está mais perto.</h2>
+                        <p>Explore perfis e fale diretamente com instrutores de trânsito.</p>
+                        <a class="button button-orange" data-protected-link href="/login-aluno.html">Começar agora <span aria-hidden="true">→</span></a>
+                    </div>
+                    <span class="hero-index" aria-hidden="true">03 <i></i> 03</span>
+                </article>
+            </div>
+            <button class="carousel-arrow carousel-previous" type="button" aria-label="Destaque anterior">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+            </button>
+            <button class="carousel-arrow carousel-next" type="button" aria-label="Próximo destaque">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+            </button>
+            <div class="carousel-dots" aria-label="Selecionar destaque">
+                <button class="carousel-dot is-active" type="button" aria-label="Destaque 1" aria-current="true"></button>
+                <button class="carousel-dot" type="button" aria-label="Destaque 2"></button>
+                <button class="carousel-dot" type="button" aria-label="Destaque 3"></button>
+            </div>
+        </section>
+
+        <section class="trust-strip" aria-label="Vantagens">
+            <div class="trust-item">
+                <span class="trust-icon" aria-hidden="true">✓</span>
+                <span><strong>Encontre seu instrutor</strong><small>Explore perfis e categorias</small></span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon" aria-hidden="true">↗</span>
+                <span><strong>Converse diretamente</strong><small>Combine os detalhes da sua aula</small></span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon" aria-hidden="true">★</span>
+                <span><strong>Escolha com confiança</strong><small>Conheça cada perfil antes de entrar em contato</small></span>
+            </div>
+        </section>
+
+        <section class="student-access-prompt" id="acesso-instrutores" aria-labelledby="titulo-acesso-instrutores">
+            <span class="eyebrow">Área exclusiva para alunos</span>
+            <h2 id="titulo-acesso-instrutores">Entre para encontrar seu instrutor</h2>
+            <p>Cadastre-se ou entre na sua conta para consultar os perfis e entrar em contato com os instrutores.</p>
+            <div class="about-actions">
+                <a class="button button-outline" href="/login-aluno.html">Entrar como aluno</a>
+                <a class="button button-orange" href="/cadastro-aluno.html">Criar cadastro</a>
+            </div>
+            <p id="mensagem-acesso-instrutores" class="access-error" role="status" hidden></p>
+        </section>
+
+        <section class="instructors-section" id="instrutores" aria-label="Instrutores disponíveis" hidden>
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">Conexões que movem você</span>
+                    <h2>Encontre seu instrutor</h2>
+                    <p>Conheça os profissionais disponíveis e encontre alguém para acompanhar sua jornada.</p>
+                </div>
+                <span class="listing-count" id="total-instrutores" aria-live="polite"></span>
+            </div>
+            <div class="filter-row">
+                <span class="filter-caption">Instrutores cadastrados</span>
+                <label class="filter-search">
+                    <span class="sr-only">Filtrar instrutores por nome, categoria ou cidade</span>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+                    <input id="filtro-lista" type="search" placeholder="Filtrar resultados">
+                </label>
+            </div>
+            <div class="instructor-grid" id="lista-instrutores" aria-live="polite" aria-busy="true">
+                <p class="listing-message">Buscando instrutores...</p>
+            </div>
+        </section>
+
+        <section class="about-section" id="sobre">
+            <span class="about-icon" aria-hidden="true">WA</span>
+            <div>
+                <span class="eyebrow">Web Autogestão</span>
+                <h2>O próximo passo é seu.</h2>
+                <p>Uma plataforma para aproximar alunos e instrutores de trânsito independentes. Conheça os perfis e converse para combinar os detalhes das aulas.</p>
+            </div>
+            <div class="about-actions">
+                <a class="button button-outline" data-protected-link href="/login-aluno.html">Conhecer instrutores <span aria-hidden="true">→</span></a>
+                <a class="button button-orange" id="about-signup-link" href="/cadastro-aluno.html">Cadastrar como aluno <span aria-hidden="true">→</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="brand brand-footer" href="#inicio">
+            <span class="brand-mark" aria-hidden="true">WA</span>
+            <span class="brand-name">Web <strong>Autogestão</strong></span>
+        </a>
+        <p>Conectando alunos e instrutores. Seu caminho, suas escolhas.</p>
+        <a class="footer-top-link" href="#inicio">Voltar ao início ↑</a>
+        <a class="footer-login-link" href="/login-admin.html">Acesso do administrador</a>
+    </footer>
+
+    <script src="/js/script.js" defer></script>
+</body>
+</html>

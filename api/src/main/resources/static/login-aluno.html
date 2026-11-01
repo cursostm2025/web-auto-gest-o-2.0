@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0060B1">
+    <meta name="description" content="Entre na sua conta de aluno do Web Autogestão.">
+    <title>Entrar como aluno | Web Autogestão</title>
+    <link rel="stylesheet" href="/css/acesso.css">
+</head>
+<body>
+    <main class="access-page">
+        <section class="access-card" aria-labelledby="titulo-login-aluno">
+            <a class="brand" href="/" aria-label="Web Autogestão, página inicial">
+                <span class="brand-mark" aria-hidden="true">WA</span>
+                <span>Web <strong>Autogestão</strong></span>
+            </a>
+            <span class="eyebrow">Área do aluno</span>
+            <h1 id="titulo-login-aluno">Entre na sua conta</h1>
+            <p class="intro">Acesse os perfis de instrutores e encontre o profissional ideal para você.</p>
+
+            <p id="mensagem-cadastro-realizado" class="form-message is-visible is-success"
+               role="status" aria-live="polite" hidden>Cadastro realizado. Entre com seu e-mail e sua senha.</p>
+
+            <form id="form-login-aluno">
+                <div class="form-field">
+                    <label for="email">E-mail</label>
+                    <input id="email" name="email" type="email" autocomplete="username"
+                           maxlength="100" required placeholder="voce@exemplo.com">
+                </div>
+                <div class="form-field">
+                    <label for="senha">Senha</label>
+                    <input id="senha" name="senha" type="password" autocomplete="current-password"
+                           required placeholder="Digite sua senha">
+                </div>
+                <p id="mensagem-login-aluno" class="form-message" role="status" aria-live="polite"></p>
+                <button class="button button-primary" type="submit">Entrar como aluno</button>
+            </form>
+
+            <p class="access-switch">Ainda não tem cadastro? <a href="/cadastro-aluno.html">Cadastre-se</a></p>
+            <a class="back-link" href="/">← Voltar para a página inicial</a>
+        </section>
+    </main>
+    <script src="/js/login-aluno.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Iniciar API (Maven Wrapper + Java 25)",
+			"type": "shell",
+			"command": "${workspaceFolder}\\api\\mvnw.cmd",
+			"args": [
+				"spring-boot:run"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}\\api",
+				"env": {
+					"JAVA_HOME": "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.5.8-hotspot"
+				}
+			},
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}

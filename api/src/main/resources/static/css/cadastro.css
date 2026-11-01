@@ -1,0 +1,121 @@
+/* Reaproveitamos as configurações globais de fundo e fonte */
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;                /* Mais estreito que a lista para ficar elegante */
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 0;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+/* Agrupa a etiqueta (label) e o campo (input) */
+
+.grupo-input {
+    margin-bottom: 15px;
+}
+
+/* Estilo para os títulos de cada campo */
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #34495e;
+    font-weight: bold;
+}
+
+/* Formata todos os campos de texto e áreas de texto */
+
+
+input[type="text"],
+input[type="email"],
+textarea {
+   
+    width: 100%;         /* Ocupa toda a largura disponível */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+    /* Box-sizing impede que o padding aumente a largura total além dos 100% */
+
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+/* Destaca o campo quando o utilizador clica nele */
+
+input:focus, textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Botão de envio do formulário */
+
+.btn-salvar {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.btn-salvar:hover {
+    background-color: #2980b9;
+}
+
+/* Botão/Link para voltar ao ecrã inicial */
+
+.btn-voltar {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #7f8c8d;
+    text-decoration: none;
+}
+
+.btn-voltar:hover {
+    color: #34495e;
+    text-decoration: underline;
+}
+
+/* Estilos para as mensagens de aviso (sucesso ou erro) */
+
+.mensagem-sucesso {
+    color: #155724;
+    background-color: #d4edda;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.mensagem-erro {
+    color: #721c24;
+    background-color: #f8d7da;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 15px;
+    text-align: center;
+}

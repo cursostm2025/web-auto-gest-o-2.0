@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0060B1">
+    <meta name="description" content="Gerencie alunos e instrutores do Web Autogestão.">
+    <title>Painel administrativo | Web Autogestão</title>
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+    <header class="admin-header">
+        <a class="admin-brand" href="/admin-painel.html">
+            <span class="brand-mark" aria-hidden="true">WA</span>
+            <span>Web <strong>Autogestão</strong></span>
+        </a>
+        <div class="admin-account">
+            <span id="admin-name">Área administrativa</span>
+            <button id="admin-logout" class="button button-outline" type="button">Sair</button>
+        </div>
+    </header>
+
+    <main class="admin-main">
+        <div class="page-heading">
+            <div>
+                <span class="eyebrow">Administração</span>
+                <h1>Alunos e instrutores</h1>
+                <p>Edite os cadastros e controle quem pode acessar ou aparecer na plataforma.</p>
+            </div>
+            <a class="button button-primary" href="/cadastro-instrutor.html">Cadastrar instrutor</a>
+        </div>
+
+        <p id="admin-message" class="admin-message" role="status" aria-live="polite" hidden></p>
+
+        <section class="summary-grid" aria-label="Resumo de cadastros">
+            <article class="summary-card">
+                <span>Alunos</span>
+                <strong id="total-alunos">—</strong>
+                <small id="ativos-alunos"></small>
+            </article>
+            <article class="summary-card">
+                <span>Instrutores</span>
+                <strong id="total-instrutores">—</strong>
+                <small id="ativos-instrutores"></small>
+            </article>
+        </section>
+
+        <section class="management-section" aria-labelledby="titulo-alunos">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">Cadastro de alunos</span>
+                    <h2 id="titulo-alunos">Alunos</h2>
+                </div>
+                <button class="button button-secondary" type="button" data-reload>Atualizar lista</button>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                    <tr><th>Nome</th><th>E-mail</th><th>Telefone</th><th>Status</th><th>Ações</th></tr>
+                    </thead>
+                    <tbody id="tabela-alunos">
+                    <tr><td colspan="5" class="table-empty">Carregando alunos...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="management-section" aria-labelledby="titulo-instrutores">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">Profissionais cadastrados</span>
+                    <h2 id="titulo-instrutores">Instrutores</h2>
+                </div>
+                <button class="button button-secondary" type="button" data-reload>Atualizar lista</button>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                    <tr><th>Nome</th><th>E-mail</th><th>WhatsApp</th><th>Status</th><th>Ações</th></tr>
+                    </thead>
+                    <tbody id="tabela-instrutores">
+                    <tr><td colspan="5" class="table-empty">Carregando instrutores...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <dialog id="dialog-edicao" class="edit-dialog">
+        <form id="form-edicao" method="dialog">
+            <div class="dialog-heading">
+                <div>
+                    <span class="eyebrow">Editar cadastro</span>
+                    <h2 id="dialog-titulo">Editar</h2>
+                </div>
+                <button class="dialog-close" type="button" data-close aria-label="Fechar">×</button>
+            </div>
+            <div id="campos-edicao" class="edit-fields"></div>
+            <p id="dialog-message" class="admin-message" role="status" aria-live="polite" hidden></p>
+            <div class="dialog-actions">
+                <button class="button button-secondary" type="button" data-close>Cancelar</button>
+                <button class="button button-primary" type="submit">Salvar alterações</button>
+            </div>
+        </form>
+    </dialog>
+
+    <script src="/js/admin-painel.js" defer></script>
+</body>
+</html>
