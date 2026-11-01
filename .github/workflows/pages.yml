@@ -60,6 +60,7 @@ jobs:
           rewritePaths(root);
           fs.writeFileSync(path.join(root, ".nojekyll"), "");
           NODE
+          test -f _site/index.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
